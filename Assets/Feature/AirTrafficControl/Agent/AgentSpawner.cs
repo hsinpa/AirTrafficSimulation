@@ -12,15 +12,22 @@ namespace AirTraffic
         [SerializeField]
         private int max_plane_on_screen;
 
+        [SerializeField]
+        private Vector3 map_size;
+
         private float time_record;
         private float time_delay = 1;
 
         private Camera m_camera;
         private List<AirCraftAgent> airCraftAgents = new List<AirCraftAgent>();
-
+        private Bounds m_map_bound;
 
         private void Start()
         {
+            this.m_map_bound = new Bounds();
+            this.m_map_bound.center = this.transform.position;
+            this.m_map_bound.size = map_size;
+
             this.m_camera = Camera.main;
         }
 
@@ -65,7 +72,7 @@ namespace AirTraffic
             int reached = 0;
 
             for (int i = l -1; i >= 0; i--) {
-                if (airCraftAgents[i].DestinateReached) {
+                if (!this.m_map_bound.Contains(airCraftAgents[i].transform.position)) {
 
                     GameObject.Destroy(airCraftAgents[i].gameObject);
 
@@ -76,5 +83,10 @@ namespace AirTraffic
             return reached;
         }
 
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireCube(this.transform.position, map_size);
+        }
     }
 }

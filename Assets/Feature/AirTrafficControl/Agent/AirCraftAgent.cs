@@ -26,6 +26,14 @@ namespace AirTraffic
             this.speed = speed;
         }
 
+        public void AssignLocation(Vector3 p_location) { 
+            
+        }
+
+        public void CommandLanding() { 
+        
+        }
+
         private void Update()
         {
             float distance = Vector3.Distance(destination, this.transform.position);

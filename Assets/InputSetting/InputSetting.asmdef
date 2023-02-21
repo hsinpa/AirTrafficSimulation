@@ -1,9 +1,8 @@
 {
-    "name": "AirTraffic",
+    "name": "InputSetting",
     "rootNamespace": "",
     "references": [
-        "GUID:75469ad4d38634e559750d17036d5f7c",
-        "GUID:12ce72fc4290c244298a10ea22f2c1b5"
+        "GUID:75469ad4d38634e559750d17036d5f7c"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

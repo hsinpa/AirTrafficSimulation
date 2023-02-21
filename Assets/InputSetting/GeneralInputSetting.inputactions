@@ -1,0 +1,65 @@
+{
+    "name": "GeneralInputSetting",
+    "maps": [
+        {
+            "name": "PlayerInput",
+            "id": "54ea8ee5-6345-40ff-a3a4-964f916ab23a",
+            "actions": [
+                {
+                    "name": "Touch",
+                    "type": "Button",
+                    "id": "0e30b154-b41b-4c39-9eb6-6dfd6e0e76f9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Press",
+                    "type": "Button",
+                    "id": "3041cd17-814e-460b-9806-d4f847a783e6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "68c6eef8-c64c-4b42-98d8-f2d9571ec1ef",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Touch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a33c9ab1-5d07-4c64-bafb-3700f8912076",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Touch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6ae73493-4585-4dfa-b014-f0e330489703",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
